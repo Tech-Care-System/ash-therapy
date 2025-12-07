@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@import "@ash-therapy/ui/styles.css";
+
+@theme {
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+}
