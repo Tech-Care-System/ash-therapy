@@ -5,7 +5,7 @@ import { APPROACH_CONTENT } from "../../data/approach";
 
 export function Approach() {
   return (
-    <section id="approach" className="bg-sage-50/50 section-padding py-24 md:py-32 relative overflow-hidden">
+    <section id="approach" className="bg-sage-50/50 py-24 md:py-32 relative overflow-hidden">
       
       {/* Background Watermark */}
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] opacity-[0.03] pointer-events-none select-none">
@@ -14,7 +14,7 @@ export function Approach() {
          </svg>
       </div>
 
-      <div className="container-width relative z-10">
+      <div className="container mx-auto px-6 md:px-12 relative z-10">
         <div className="mx-auto max-w-4xl text-center">
           <FadeIn>
             <span className="text-sage-600 font-bold uppercase tracking-widest text-sm mb-4 block">Our Philosophy</span>
