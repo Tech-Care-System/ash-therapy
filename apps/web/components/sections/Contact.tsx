@@ -1,7 +1,7 @@
 "use client";
 
 import { FadeIn } from "@ash-therapy/ui";
-import { Button, Card, CardBody, FieldError, Input, Label, TextArea, TextField } from "@heroui/react";
+import { Button, Card, CardBody, Input, Textarea } from "@heroui/react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Loader2, Mail, Send } from "lucide-react";
 import { useState } from "react";
@@ -124,58 +124,60 @@ export function Contact() {
                     </div>
                   ) : (
                     <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
+                      <Input
+                        isInvalid={!!errors.name}
+                        errorMessage={errors.name?.message}
+                        label="Name"
+                        placeholder="Your name"
+                        classNames={{
+                          inputWrapper: "bg-white border border-stone-200 hover:border-sage-300 focus-within:border-sage-500 shadow-none rounded-xl",
+                          input: "px-4 py-2.5 w-full text-base",
+                          label: "text-stone-500 text-sm font-medium mb-1.5",
+                          errorMessage: "text-red-500 text-xs mt-1 ml-1"
+                        }}
+                        {...register("name")}
+                      />
                       
-                      <TextField 
-                        isInvalid={!!errors.name} 
-                        className="w-full"
-                      >
-                         <Label className="text-stone-500 text-sm font-medium mb-1.5 block">Name</Label>
-                         <Input 
-                            placeholder="Your name"
-                            className="bg-white border border-stone-200 hover:border-sage-300 focus:border-sage-500 shadow-none px-4 py-2.5 rounded-xl w-full text-base outline-none focus:ring-1 focus:ring-sage-500"
-                            {...register("name")}
-                         />
-                         <FieldError className="text-red-500 text-xs mt-1 ml-1">{errors.name?.message}</FieldError>
-                      </TextField>
-                      
-                      <TextField 
-                        isInvalid={!!errors.email} 
-                        className="w-full"
-                      >
-                         <Label className="text-stone-500 text-sm font-medium mb-1.5 block">Email</Label>
-                         <Input 
-                            placeholder="your@email.com"
-                            type="email"
-                            className="bg-white border border-stone-200 hover:border-sage-300 focus:border-sage-500 shadow-none px-4 py-2.5 rounded-xl w-full text-base outline-none focus:ring-1 focus:ring-sage-500"
-                            {...register("email")}
-                         />
-                         <FieldError className="text-red-500 text-xs mt-1 ml-1">{errors.email?.message}</FieldError>
-                      </TextField>
+                      <Input
+                        isInvalid={!!errors.email}
+                        errorMessage={errors.email?.message}
+                        label="Email"
+                        placeholder="your@email.com"
+                        type="email"
+                        classNames={{
+                          inputWrapper: "bg-white border border-stone-200 hover:border-sage-300 focus-within:border-sage-500 shadow-none rounded-xl",
+                          input: "px-4 py-2.5 w-full text-base",
+                          label: "text-stone-500 text-sm font-medium mb-1.5",
+                          errorMessage: "text-red-500 text-xs mt-1 ml-1"
+                        }}
+                        {...register("email")}
+                      />
 
-                      <TextField 
-                         className="w-full"
-                      >
-                         <Label className="text-stone-500 text-sm font-medium mb-1.5 block">Phone (Optional)</Label>
-                         <Input 
-                            placeholder="Your phone number"
-                            type="tel"
-                            className="bg-white border border-stone-200 hover:border-sage-300 focus:border-sage-500 shadow-none px-4 py-2.5 rounded-xl w-full text-base outline-none focus:ring-1 focus:ring-sage-500"
-                            {...register("phone")}
-                         />
-                      </TextField>
+                      <Input
+                        label="Phone (Optional)"
+                        placeholder="Your phone number"
+                        type="tel"
+                        classNames={{
+                          inputWrapper: "bg-white border border-stone-200 hover:border-sage-300 focus-within:border-sage-500 shadow-none rounded-xl",
+                          input: "px-4 py-2.5 w-full text-base",
+                          label: "text-stone-500 text-sm font-medium mb-1.5",
+                        }}
+                        {...register("phone")}
+                      />
 
-                      <TextField 
-                        isInvalid={!!errors.message} 
-                        className="w-full"
-                      >
-                         <Label className="text-stone-500 text-sm font-medium mb-1.5 block">Message</Label>
-                         <TextArea 
-                            placeholder="How can I help you?"
-                            className="bg-white border border-stone-200 hover:border-sage-300 focus:border-sage-500 shadow-none px-4 py-3 rounded-xl w-full text-base min-h-[120px] outline-none focus:ring-1 focus:ring-sage-500"
-                            {...register("message")}
-                         />
-                         <FieldError className="text-red-500 text-xs mt-1 ml-1">{errors.message?.message}</FieldError>
-                      </TextField>
+                      <Textarea
+                        isInvalid={!!errors.message}
+                        errorMessage={errors.message?.message}
+                        label="Message"
+                        placeholder="How can I help you?"
+                        classNames={{
+                          inputWrapper: "bg-white border border-stone-200 hover:border-sage-300 focus-within:border-sage-500 shadow-none rounded-xl",
+                          input: "px-4 py-3 w-full text-base min-h-[120px]",
+                          label: "text-stone-500 text-sm font-medium mb-1.5",
+                          errorMessage: "text-red-500 text-xs mt-1 ml-1"
+                        }}
+                        {...register("message")}
+                      />
 
                       {error && (
                         <div className="p-3 bg-red-50 text-red-600 text-sm rounded-lg border border-red-100">
