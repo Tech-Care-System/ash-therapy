@@ -1,7 +1,7 @@
 "use client";
 
 import { FadeIn } from "@ash-therapy/ui";
-import { Card, CardContent } from "@heroui/react";
+import { Card, CardBody } from "@heroui/react";
 import {
   Brain,
   CloudRain,
@@ -75,7 +75,7 @@ export function Services() {
                    {/* Inner Glow Effect */}
                    <div className="absolute inset-0 bg-gradient-to-br from-white/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
                    
-                   <CardContent className="p-8 flex flex-col items-center text-center justify-center h-full relative overflow-hidden">
+                   <CardBody className="p-8 flex flex-col items-center text-center justify-center h-full relative overflow-hidden">
                      <div className="relative z-10 flex flex-col items-center">
                        <div className="bg-white text-sage-600 mb-6 rounded-2xl p-4 shadow-sm border border-sage-50 group-hover:scale-110 transition-transform duration-500">
                          <Icon className="h-8 w-8 stroke-[1.25px]" />
