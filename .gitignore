@@ -50,3 +50,4 @@ coverage
 # Gemini and Bmad related files
 .bmad-core/
 .gemini/
+.vercel
