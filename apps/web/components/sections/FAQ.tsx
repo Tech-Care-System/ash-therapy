@@ -22,7 +22,7 @@ export function FAQ() {
                </h2>
              </div>
              
-             <Accordion className="space-y-4">
+             <Accordion variant="splitted" className="space-y-4">
                {faq.map((item, index) => (
                  <AccordionItem 
                    key={index} 
