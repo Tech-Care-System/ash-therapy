@@ -84,7 +84,7 @@ export function Services() {
                          {service.title}
                        </h3>
                      </div>
-                   </CardContent>
+                   </CardBody>
                 </Card>
               </FadeIn>
             );
