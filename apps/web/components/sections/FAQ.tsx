@@ -1,7 +1,7 @@
 "use client";
 
 import { FadeIn } from "@ash-therapy/ui";
-import { Accordion, AccordionHeading, AccordionItem, AccordionPanel, AccordionTrigger } from "@heroui/react";
+import { Accordion, AccordionItem } from "@heroui/react";
 import { ChevronDown } from "lucide-react";
 import { faq } from "../../data/faq";
 
@@ -22,23 +22,21 @@ export function FAQ() {
                </h2>
              </div>
              
-             <Accordion className="space-y-4" allowsMultipleExpanded>
+             <Accordion className="space-y-4">
                {faq.map((item, index) => (
                  <AccordionItem 
                    key={index} 
-                   className="group border border-stone-100 rounded-3xl px-6 bg-white shadow-sm hover:shadow-md transition-all duration-300 data-[open=true]:shadow-md data-[open=true]:border-sage-200"
+                   title={item.question}
+                   indicator={<ChevronDown />}
+                   classNames={{
+                     base: "group border border-stone-100 rounded-3xl px-6 bg-white shadow-sm hover:shadow-md transition-all duration-300 data-[open=true]:shadow-md data-[open=true]:border-sage-200",
+                     title: "flex-1 mr-4 font-serif text-xl group-data-[open=true]:text-sage-700 transition-colors",
+                     trigger: "flex w-full items-center justify-between py-6 text-lg text-stone-800 font-medium text-left outline-none cursor-pointer group-data-[focus-visible=true]:ring-2 ring-sage-300 rounded-lg",
+                     indicator: "bg-sage-50 p-2 rounded-full group-hover:bg-sage-100 transition-colors text-sage-500",
+                     content: "text-stone-600 pb-8 pt-2 leading-relaxed font-sans text-lg"
+                   }}
                  >
-                   <AccordionHeading>
-                     <AccordionTrigger className="flex w-full items-center justify-between py-6 text-lg text-stone-800 font-medium text-left outline-none cursor-pointer group-data-[focus-visible=true]:ring-2 ring-sage-300 rounded-lg">
-                       <span className="flex-1 mr-4 font-serif text-xl group-data-[open=true]:text-sage-700 transition-colors">{item.question}</span>
-                       <div className="bg-sage-50 p-2 rounded-full group-hover:bg-sage-100 transition-colors">
-                          <ChevronDown className="w-5 h-5 text-sage-500 transition-transform duration-300 group-data-[expanded=true]:rotate-180" />
-                       </div>
-                     </AccordionTrigger>
-                   </AccordionHeading>
-                   <AccordionPanel className="text-stone-600 pb-8 pt-2 leading-relaxed font-sans text-lg">
-                     {item.answer}
-                   </AccordionPanel>
+                   {item.answer}
                  </AccordionItem>
                ))}
              </Accordion>
