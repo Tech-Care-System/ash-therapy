@@ -1,0 +1,25 @@
+# Product Requirements Document (PRD): Ash Therapy & Counselling
+
+## Table of Contents
+
+- [Product Requirements Document (PRD): Ash Therapy & Counselling](#table-of-contents)
+  - [1. Goals and Background Context](./1-goals-and-background-context.md)
+    - [🎯 Goals](./1-goals-and-background-context.md#goals)
+    - [📖 Background Context](./1-goals-and-background-context.md#background-context)
+    - [📋 Change Log](./1-goals-and-background-context.md#change-log)
+  - [2. Requirements](./2-requirements.md)
+    - [🛠️ Functional Requirements (FR)](./2-requirements.md#functional-requirements-fr)
+    - [⚙️ Non-Functional Requirements (NFR)](./2-requirements.md#non-functional-requirements-nfr)
+  - [3. User Interface Design Goals](./3-user-interface-design-goals.md)
+    - [🎨 Overall UX Vision](./3-user-interface-design-goals.md#overall-ux-vision)
+    - [👆 Key Interaction Paradigms ("The Tricks")](./3-user-interface-design-goals.md#key-interaction-paradigms-the-tricks)
+    - [📱 Core Screens and Views](./3-user-interface-design-goals.md#core-screens-and-views)
+    - [♿ Accessibility](./3-user-interface-design-goals.md#accessibility)
+    - [🎨 Branding](./3-user-interface-design-goals.md#branding)
+    - [📱 Target Device and Platforms](./3-user-interface-design-goals.md#target-device-and-platforms)
+  - [4. Technical Assumptions](./4-technical-assumptions.md)
+  - [5. Epic List](./5-epic-list.md)
+    - [Epic 1: Digital Sanctuary Foundation (Phase 1)](./5-epic-list.md#epic-1-digital-sanctuary-foundation-phase-1)
+      - [Stories](./5-epic-list.md#stories)
+    - [Epic 2: Integrated Booking System (Future/Phase 2)](./5-epic-list.md#epic-2-integrated-booking-system-futurephase-2)
+    - [Epic 3: Client Portal & Resources (Future/Phase 3)](./5-epic-list.md#epic-3-client-portal-resources-futurephase-3)

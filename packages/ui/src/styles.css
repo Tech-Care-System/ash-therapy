@@ -1,0 +1,53 @@
+@import "tailwindcss";
+
+@theme {
+  /* Sage Green Palette */
+  --color-primary-50: oklch(0.97 0.02 140);
+  --color-primary-100: oklch(0.94 0.04 140);
+  --color-primary-200: oklch(0.89 0.06 140);
+  --color-primary-300: oklch(0.82 0.09 140);
+  --color-primary-400: oklch(0.71 0.11 140);
+  --color-primary-500: oklch(0.60 0.12 140); /* Main Sage */
+  --color-primary-600: oklch(0.48 0.12 140);
+  --color-primary-700: oklch(0.39 0.10 140);
+  --color-primary-800: oklch(0.32 0.09 140);
+  --color-primary-900: oklch(0.24 0.07 140); /* Deep Forest */
+
+  /* Sage Aliases */
+  --color-sage-50: var(--color-primary-50);
+  --color-sage-100: var(--color-primary-100);
+  --color-sage-200: var(--color-primary-200);
+  --color-sage-300: var(--color-primary-300);
+  --color-sage-400: var(--color-primary-400);
+  --color-sage-500: var(--color-primary-500);
+  --color-sage-600: var(--color-primary-600);
+  --color-sage-700: var(--color-primary-700);
+  --color-sage-800: var(--color-primary-800);
+  --color-sage-900: var(--color-primary-900);
+
+  /* Clay/Terracotta Palette */
+  --color-secondary-50: oklch(0.97 0.02 45);
+  --color-secondary-100: oklch(0.94 0.04 45);
+  --color-secondary-200: oklch(0.88 0.07 45);
+  --color-secondary-300: oklch(0.80 0.10 45);
+  --color-secondary-400: oklch(0.68 0.14 45);
+  --color-secondary-500: oklch(0.58 0.16 45);
+  --color-secondary-600: oklch(0.48 0.16 45);
+  --color-secondary-700: oklch(0.39 0.14 45);
+  --color-secondary-800: oklch(0.32 0.11 45);
+  --color-secondary-900: oklch(0.24 0.09 45);
+
+  --color-background: oklch(0.98 0.01 100); /* Warm Cream */
+  --color-foreground: var(--color-primary-900);
+  
+  --font-serif: "Playfair Display", serif;
+  --font-sans: "Inter", sans-serif;
+  
+  --radius-xl: 1rem;
+  --radius-2xl: 1.5rem;
+}
+
+:root {
+  --background: var(--color-background);
+  --foreground: var(--color-secondary);
+}
