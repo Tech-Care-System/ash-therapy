@@ -1,7 +1,7 @@
 "use client";
 
 import { FadeIn } from "@ash-therapy/ui";
-import { Card, CardContent } from "@heroui/react";
+import { Card, CardBody } from "@heroui/react";
 import { logistics } from "../../data/logistics";
 
 export function Logistics() {
@@ -35,7 +35,7 @@ export function Logistics() {
             <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
               {/* Fees Card */}
               <Card className="bg-white/60 backdrop-blur-xl border border-white/50 shadow-lg shadow-sage-100/20 hover:shadow-xl hover:bg-white/80 transition-all duration-500 hover:-translate-y-1 group rounded-3xl">
-                <CardContent className="p-10">
+                <CardBody className="p-10">
                   <h3 className="text-2xl font-serif text-stone-800 mb-6 group-hover:text-sage-700 transition-colors">Fees</h3>
                   <div className="flex items-baseline gap-3 mb-6">
                     <span className="text-5xl font-light text-stone-800">{logistics.fees.price}</span>
@@ -48,12 +48,12 @@ export function Logistics() {
                      <span className="w-2 h-2 rounded-full bg-sage-500" />
                      Payment via bank transfer
                   </div>
-                </CardContent>
+                </CardBody>
               </Card>
 
               {/* Availability Card */}
               <Card className="bg-white/60 backdrop-blur-xl border border-white/50 shadow-lg shadow-sage-100/20 hover:shadow-xl hover:bg-white/80 transition-all duration-500 hover:-translate-y-1 group rounded-3xl">
-                 <CardContent className="p-10">
+                 <CardBody className="p-10">
                   <h3 className="text-2xl font-serif text-stone-800 mb-6 group-hover:text-sage-700 transition-colors">Availability</h3>
                   <p className="text-stone-600 leading-relaxed mb-8 text-lg">
                     {logistics.availability.description}
@@ -72,7 +72,7 @@ export function Logistics() {
                       <span className="font-medium">{logistics.availability.commitment}</span>
                     </div>
                   </div>
-                 </CardContent>
+                 </CardBody>
               </Card>
             </div>
 
