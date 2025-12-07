@@ -1,7 +1,7 @@
 "use client";
 
 import { FadeIn } from "@ash-therapy/ui";
-import { Button, Card, CardContent, FieldError, Input, Label, TextArea, TextField } from "@heroui/react";
+import { Button, Card, CardBody, FieldError, Input, Label, TextArea, TextField } from "@heroui/react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Loader2, Mail, Send } from "lucide-react";
 import { useState } from "react";
@@ -104,7 +104,7 @@ export function Contact() {
 
               {/* Right Column: Form */}
               <Card className="bg-white/80 backdrop-blur-xl border border-white/50 shadow-xl shadow-sage-100/20 rounded-3xl overflow-hidden">
-                <CardContent className="p-8 md:p-10">
+                <CardBody className="p-8 md:p-10">
                   {isSuccess ? (
                     <div className="flex flex-col items-center justify-center text-center py-12 space-y-4">
                         <div className="w-16 h-16 bg-sage-100 text-sage-600 rounded-full flex items-center justify-center mb-4">
@@ -192,7 +192,7 @@ export function Contact() {
                       </Button>
                     </form>
                   )}
-                </CardContent>
+                </CardBody>
               </Card>
             </div>
           </div>
