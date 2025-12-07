@@ -1,7 +1,7 @@
 "use client";
 
 import { FadeIn } from "@ash-therapy/ui";
-import { Button, Card, CardBody, Input, Textarea } from "@heroui/react";
+import { Button, Card, CardBody } from "@heroui/react";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { Loader2, Mail, Send } from "lucide-react";
 import { useState } from "react";
@@ -60,11 +60,11 @@ export function Contact() {
       id="contact" 
       className="relative overflow-hidden py-24 md:py-32 bg-stone-50 text-stone-800"
     >
-        {/* Background Overlay */}
-       <div className="absolute inset-0 bg-stone-50/90 pointer-events-none" />
+      {/* Background Overlay */}
+      <div className="absolute inset-0 bg-stone-50/90 pointer-events-none" />
        
-       {/* Background Decor */}
-       <div className="absolute top-1/2 left-1/2 w-[800px] h-[800px] bg-sage-100/40 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
+      {/* Background Decor */}
+      <div className="absolute top-1/2 left-1/2 w-[800px] h-[800px] bg-sage-100/40 rounded-full blur-[100px] -translate-x-1/2 -translate-y-1/2 pointer-events-none" />
 
       <div className="container mx-auto px-6 relative z-10">
         <FadeIn>
@@ -79,27 +79,27 @@ export function Contact() {
             <div className="grid lg:grid-cols-2 gap-12 items-start">
               {/* Left Column: Info */}
               <div className="space-y-8 lg:pr-8">
-                 <div className="prose prose-stone prose-lg">
-                    <p className="text-stone-600 leading-relaxed text-lg">
-                        You are welcome to use this space in whatever way feels most comfortable. Whether that is asking a question, exploring what you are looking for, or simply getting a feel for what working together might be like.
-                    </p>
-                    <p className="text-stone-600 leading-relaxed text-lg">
-                        There is no pressure or expectation. This is just a gentle first step toward support.
-                    </p>
-                 </div>
+                <div className="prose prose-stone prose-lg">
+                  <p className="text-stone-600 leading-relaxed text-lg">
+                    You are welcome to use this space in whatever way feels most comfortable. Whether that is asking a question, exploring what you are looking for, or simply getting a feel for what working together might be like.
+                  </p>
+                  <p className="text-stone-600 leading-relaxed text-lg">
+                    There is no pressure or expectation. This is just a gentle first step toward support.
+                  </p>
+                </div>
 
-                 <div className="bg-white/60 p-8 rounded-3xl border border-white/50 shadow-sm">
-                    <h3 className="text-xl font-serif text-stone-800 mb-4">Direct Contact</h3>
-                    <a 
-                      href="mailto:ashsach25@outlook.com" 
-                      className="flex items-center gap-3 text-sage-700 hover:text-sage-900 transition-colors text-lg font-medium group"
-                    >
-                       <div className="w-10 h-10 rounded-full bg-sage-100 flex items-center justify-center text-sage-600 group-hover:scale-110 transition-transform">
-                          <Mail className="w-5 h-5" />
-                       </div>
-                       ashsach25@outlook.com
-                    </a>
-                 </div>
+                <div className="bg-white/60 p-8 rounded-3xl border border-white/50 shadow-sm">
+                  <h3 className="text-xl font-serif text-stone-800 mb-4">Direct Contact</h3>
+                  <a 
+                    href="mailto:ashsach25@outlook.com" 
+                    className="flex items-center gap-3 text-sage-700 hover:text-sage-900 transition-colors text-lg font-medium group"
+                  >
+                    <div className="w-10 h-10 rounded-full bg-sage-100 flex items-center justify-center text-sage-600 group-hover:scale-110 transition-transform">
+                      <Mail className="w-5 h-5" />
+                    </div>
+                    ashsach25@outlook.com
+                  </a>
+                </div>
               </div>
 
               {/* Right Column: Form */}
@@ -107,77 +107,88 @@ export function Contact() {
                 <CardBody className="p-8 md:p-10">
                   {isSuccess ? (
                     <div className="flex flex-col items-center justify-center text-center py-12 space-y-4">
-                        <div className="w-16 h-16 bg-sage-100 text-sage-600 rounded-full flex items-center justify-center mb-4">
-                            <Send className="w-8 h-8" />
-                        </div>
-                        <h3 className="text-2xl font-serif text-stone-800">Message Sent</h3>
-                        <p className="text-stone-600 max-w-sm">
-                          Thank you for reaching out. I will get back to you as soon as I can.
-                        </p>
-                        <Button
-                          variant="ghost"
-                          className="mt-4 text-sage-700 font-medium"
-                          onPress={() => setIsSuccess(false)}
-                        >
-                          Send another message
-                        </Button>
+                      <div className="w-16 h-16 bg-sage-100 text-sage-600 rounded-full flex items-center justify-center mb-4">
+                        <Send className="w-8 h-8" />
+                      </div>
+                      <h3 className="text-2xl font-serif text-stone-800">Message Sent</h3>
+                      <p className="text-stone-600 max-w-sm">
+                        Thank you for reaching out. I will get back to you as soon as I can.
+                      </p>
+                      <Button
+                        variant="ghost"
+                        className="mt-4 text-sage-700 font-medium"
+                        onPress={() => setIsSuccess(false)}
+                      >
+                        Send another message
+                      </Button>
                     </div>
                   ) : (
-                    <form onSubmit={handleSubmit(onSubmit)} className="space-y-6">
-                      <Input
-                        isInvalid={!!errors.name}
-                        errorMessage={errors.name?.message}
-                        label="Name"
-                        placeholder="Your name"
-                        classNames={{
-                          inputWrapper: "bg-white border border-stone-200 hover:border-sage-300 focus-within:border-sage-500 shadow-none rounded-xl",
-                          input: "px-4 py-2.5 w-full text-base",
-                          label: "text-stone-500 text-sm font-medium mb-1.5",
-                          errorMessage: "text-red-500 text-xs mt-1 ml-1"
-                        }}
-                        {...register("name")}
-                      />
+                    <form onSubmit={handleSubmit(onSubmit)} className="flex flex-col gap-5">
                       
-                      <Input
-                        isInvalid={!!errors.email}
-                        errorMessage={errors.email?.message}
-                        label="Email"
-                        placeholder="your@email.com"
-                        type="email"
-                        classNames={{
-                          inputWrapper: "bg-white border border-stone-200 hover:border-sage-300 focus-within:border-sage-500 shadow-none rounded-xl",
-                          input: "px-4 py-2.5 w-full text-base",
-                          label: "text-stone-500 text-sm font-medium mb-1.5",
-                          errorMessage: "text-red-500 text-xs mt-1 ml-1"
-                        }}
-                        {...register("email")}
-                      />
+                      {/* Name Field */}
+                      <div className="flex flex-col gap-1.5">
+                        <label htmlFor="name" className="text-stone-500 text-sm font-medium">
+                          Name
+                        </label>
+                        <input
+                          id="name"
+                          type="text"
+                          placeholder="Your name"
+                          className="w-full h-14 px-4 bg-white border border-stone-200 rounded-xl text-stone-800 placeholder:text-stone-400 outline-none transition-colors hover:border-sage-300 focus:border-sage-500 focus:ring-1 focus:ring-sage-500"
+                          {...register("name")}
+                        />
+                        {errors.name && (
+                          <p className="text-red-500 text-xs mt-0.5">{errors.name.message}</p>
+                        )}
+                      </div>
 
-                      <Input
-                        label="Phone (Optional)"
-                        placeholder="Your phone number"
-                        type="tel"
-                        classNames={{
-                          inputWrapper: "bg-white border border-stone-200 hover:border-sage-300 focus-within:border-sage-500 shadow-none rounded-xl",
-                          input: "px-4 py-2.5 w-full text-base",
-                          label: "text-stone-500 text-sm font-medium mb-1.5",
-                        }}
-                        {...register("phone")}
-                      />
+                      {/* Email Field */}
+                      <div className="flex flex-col gap-1.5">
+                        <label htmlFor="email" className="text-stone-500 text-sm font-medium">
+                          Email
+                        </label>
+                        <input
+                          id="email"
+                          type="email"
+                          placeholder="your@email.com"
+                          className="w-full h-14 px-4 bg-white border border-stone-200 rounded-xl text-stone-800 placeholder:text-stone-400 outline-none transition-colors hover:border-sage-300 focus:border-sage-500 focus:ring-1 focus:ring-sage-500"
+                          {...register("email")}
+                        />
+                        {errors.email && (
+                          <p className="text-red-500 text-xs mt-0.5">{errors.email.message}</p>
+                        )}
+                      </div>
 
-                      <Textarea
-                        isInvalid={!!errors.message}
-                        errorMessage={errors.message?.message}
-                        label="Message"
-                        placeholder="How can I help you?"
-                        classNames={{
-                          inputWrapper: "bg-white border border-stone-200 hover:border-sage-300 focus-within:border-sage-500 shadow-none rounded-xl",
-                          input: "px-4 py-3 w-full text-base min-h-[120px]",
-                          label: "text-stone-500 text-sm font-medium mb-1.5",
-                          errorMessage: "text-red-500 text-xs mt-1 ml-1"
-                        }}
-                        {...register("message")}
-                      />
+                      {/* Phone Field */}
+                      <div className="flex flex-col gap-1.5">
+                        <label htmlFor="phone" className="text-stone-500 text-sm font-medium">
+                          Phone (Optional)
+                        </label>
+                        <input
+                          id="phone"
+                          type="tel"
+                          placeholder="Your phone number"
+                          className="w-full h-14 px-4 bg-white border border-stone-200 rounded-xl text-stone-800 placeholder:text-stone-400 outline-none transition-colors hover:border-sage-300 focus:border-sage-500 focus:ring-1 focus:ring-sage-500"
+                          {...register("phone")}
+                        />
+                      </div>
+
+                      {/* Message Field */}
+                      <div className="flex flex-col gap-1.5">
+                        <label htmlFor="message" className="text-stone-500 text-sm font-medium">
+                          Message
+                        </label>
+                        <textarea
+                          id="message"
+                          rows={4}
+                          placeholder="How can I help you?"
+                          className="w-full px-4 py-3 bg-white border border-stone-200 rounded-xl text-stone-800 placeholder:text-stone-400 outline-none transition-colors hover:border-sage-300 focus:border-sage-500 focus:ring-1 focus:ring-sage-500 resize-none"
+                          {...register("message")}
+                        />
+                        {errors.message && (
+                          <p className="text-red-500 text-xs mt-0.5">{errors.message.message}</p>
+                        )}
+                      </div>
 
                       {error && (
                         <div className="p-3 bg-red-50 text-red-600 text-sm rounded-lg border border-red-100">
@@ -188,9 +199,9 @@ export function Contact() {
                       <Button
                         type="submit"
                         isDisabled={isSubmitting}
-                        className="w-full bg-sage-600 hover:bg-sage-700 text-white font-medium h-12 text-lg rounded-xl shadow-lg shadow-sage-200/50"
+                        className="w-full bg-sage-600 hover:bg-sage-700 text-white font-medium h-12 text-lg rounded-xl shadow-lg shadow-sage-200/50 mt-2"
                       >
-                         {isSubmitting ? <Loader2 className="w-5 h-5 animate-spin" /> : "Send Message"}
+                        {isSubmitting ? <Loader2 className="w-5 h-5 animate-spin" /> : "Send Message"}
                       </Button>
                     </form>
                   )}
