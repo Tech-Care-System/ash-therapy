@@ -2,7 +2,7 @@
 
 import { FadeIn } from "@ash-therapy/ui";
 import { Accordion, AccordionItem } from "@heroui/react";
-import { ChevronDown } from "lucide-react";
+import { ChevronLeft } from "lucide-react";
 import { faq } from "../../data/faq";
 
 export function FAQ() {
@@ -27,12 +27,12 @@ export function FAQ() {
                  <AccordionItem 
                    key={index} 
                    title={item.question}
-                   indicator={<ChevronDown />}
+                   indicator={<ChevronLeft />}
                    classNames={{
                      base: "group border border-stone-100 rounded-3xl px-6 bg-white shadow-sm hover:shadow-md transition-all duration-300 data-[open=true]:shadow-md data-[open=true]:border-sage-200",
                      title: "flex-1 mr-4 font-serif text-xl group-data-[open=true]:text-sage-700 transition-colors",
                      trigger: "flex w-full items-center justify-between py-6 text-lg text-stone-800 font-medium text-left outline-none cursor-pointer group-data-[focus-visible=true]:ring-2 ring-sage-300 rounded-lg",
-                     indicator: "bg-sage-50 p-2 rounded-full group-hover:bg-sage-100 transition-colors text-sage-500",
+                     indicator: "bg-sage-50 p-2 rounded-full group-hover:bg-sage-100 transition-transform text-sage-500 group-data-[open=true]:-rotate-90",
                      content: "text-stone-600 pb-8 pt-2 leading-relaxed font-sans text-lg"
                    }}
                  >

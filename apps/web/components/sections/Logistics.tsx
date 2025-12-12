@@ -37,9 +37,10 @@ export function Logistics() {
               <Card className="bg-white/60 backdrop-blur-xl border border-white/50 shadow-lg shadow-sage-100/20 hover:shadow-xl hover:bg-white/80 transition-all duration-500 hover:-translate-y-1 group rounded-3xl">
                 <CardBody className="p-10">
                   <h3 className="text-2xl font-serif text-stone-800 mb-6 group-hover:text-sage-700 transition-colors">Fees</h3>
-                  <div className="flex items-baseline gap-3 mb-6">
-                    <span className="text-5xl font-light text-stone-800">{logistics.fees.price}</span>
-                    <span className="text-lg text-stone-500 font-medium">/ {logistics.fees.duration}</span>
+                  <div className="mb-6">
+                     <span className="text-xl text-stone-700 font-medium bg-stone-100 px-4 py-2 rounded-full">
+                        {logistics.fees.price} / {logistics.fees.duration}
+                     </span>
                   </div>
                   <p className="text-stone-600 leading-relaxed mb-6 text-lg">
                     {logistics.fees.description}

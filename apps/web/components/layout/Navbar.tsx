@@ -37,9 +37,14 @@ export const Navbar = () => {
               window.scrollTo({ top: 0, behavior: "smooth" });
             }
           }}
-          className="font-serif text-2xl font-bold text-stone-800 tracking-tight"
+          className="flex flex-col items-start leading-none group"
         >
-          Ash Therapy<span className="text-sage-600">.</span>
+          <span className="font-serif text-2xl font-bold text-stone-800 tracking-tight group-hover:text-amber-900/80 transition-colors">
+            Ash Therapy<span className="text-sage-600">.</span>
+          </span>
+          <span className="text-sm font-medium text-stone-500 tracking-wide mt-0.5">
+            & Consultation
+          </span>
         </Link>
         
         {/* Desktop Menu */}
