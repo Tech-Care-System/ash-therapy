@@ -33,16 +33,15 @@ export const Hero = () => {
             <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
                <Button
                  size="lg"
-                 className="bg-stone-800 text-stone-50 font-medium px-8 py-4 h-auto text-lg rounded-full hover:bg-stone-700 hover:scale-[1.02] transition-all duration-300 shadow-xl shadow-stone-200/50"
+                 className="bg-sage-600 text-white font-medium px-8 py-4 h-auto text-lg rounded-full hover:bg-sage-700 hover:scale-[1.02] transition-all duration-300 shadow-xl shadow-sage-200/50"
+                 onPress={() => {
+                   const contactSection = document.getElementById("contact");
+                   if (contactSection) {
+                     contactSection.scrollIntoView({ behavior: "smooth" });
+                   }
+                 }}
                >
                  Book Consultation
-               </Button>
-               <Button
-                 size="lg"
-                 variant="light"
-                 className="text-stone-700 font-medium px-8 py-4 h-auto text-lg rounded-full hover:scale-[1.02] transition-all duration-300 border border-sage-600"
-               >
-                 Learn More
                </Button>
             </div>
           </FadeIn>
@@ -56,8 +55,8 @@ export const Hero = () => {
                 <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[90%] h-[90%] rounded-[3rem] overflow-hidden shadow-2xl shadow-stone-200/50 z-10">
                    <div className="absolute inset-0 bg-stone-200 animate-pulse" /> {/* Placeholder color while loading */}
                    <Image
-                     src="/images/hero/hero-calm.png"
-                     alt="Calm, sunlit therapy space with plants"
+                     src="/images/hero/hero-sage-v2.png"
+                     alt="Calm, sunlit therapy calming office space"
                      fill
                      className="object-cover"
                      priority
