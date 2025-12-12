@@ -4,3 +4,6 @@ packages:
 
 ignoredBuiltDependencies:
   - '@heroui/shared-utils'
+
+onlyBuiltDependencies:
+  - sharp
