@@ -1,8 +1,21 @@
 export const APPROACH_CONTENT = {
   title: "How We Work Together",
-  paragraphs: [
-    "In our sessions, we will explore what has been feeling difficult for you at a pace that feels manageable and safe. You are welcome to bring whatever is on your mind, whether it is something specific or a general sense that things feel heavy, confusing or stuck. There is no right or wrong way to begin.",
-    "We might look at what is happening in your life right now, and if it feels helpful, we can gently explore what has shaped you. This is not about finding fault or giving you a label, but about understanding your experiences and how they may be affecting you today. If it feels useful, I can offer tools and strategies from CBT, but our work will always stay grounded in what feels right for you.",
-    "My role is to offer a calm, accepting and steady space where you can talk openly and feel heard. A space where you can slow down, reflect and begin to navigate your experiences with more clarity, self compassion and grounding.",
-  ],
+  subtitle: "A gentle, paced journey toward healing",
+  steps: [
+    {
+      title: "Safe Exploration",
+      description: "We begin by exploring what feels difficult at a pace that feels manageable and safe. There is no right or wrong way to start—you are welcome to bring exactly what is on your mind.",
+      icon: "Sprout"
+    },
+    {
+      title: "Gentle Insight",
+      description: "We gently look at what shapes your experiences, not to find fault or labels, but to understand. We may use tools to navigate your feelings, always grounded in what feels right for you.",
+      icon: "Lightbulb"
+    },
+    {
+      title: "Steady Growth",
+      description: "I offer a calm, accepting space where you can slow down and feel heard. Together, we build clarity, self-compassion, and a grounded sense of self to carry forward.",
+      icon: "HeartHandshake"
+    }
+  ]
 };
