@@ -53,7 +53,7 @@ export const About = () => {
                       Life has its challenges, and there were times in my own journey when I longed for someone who could really hear me. That experience shapes the gentle, grounded way I hold space for others now.
                    </p>
                    <p>
-                      I am a registered member of the BACP and hold an MSc in Integrative Counselling. My approach is warm, gentle, and trauma-informed—blending person-centered care with practical tools to help you find your footing.
+                      I am a registered member of the BACP and hold an MSc in Integrative Counselling. My approach is warm, gentle, and trauma-informed, blending person-centered care with practical tools to help you find your footing.
                    </p>
                 </div>
              </FadeIn>
@@ -61,7 +61,7 @@ export const About = () => {
              <FadeIn delay={0.5} direction="up">
                 <div className="pt-6">
                    {/* Signature-like element */}
-                   <p className="font-serif text-3xl text-stone-800 italic opacity-80 select-none">Ash Sach</p>
+                   <p className="font-serif text-3xl text-stone-800 italic opacity-80 select-none">Ashmeet Sachdev</p>
                    <p className="text-sm text-stone-500 mt-2 uppercase tracking-wide">MSc, MBACP</p>
                 </div>
              </FadeIn>
