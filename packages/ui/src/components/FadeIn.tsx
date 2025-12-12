@@ -33,6 +33,7 @@ export const FadeIn = ({
   return (
     <div ref={ref} className={`${fullWidth ? "w-full" : ""} ${className}`}>
       <motion.div
+        className="h-full w-full"
         initial={{ opacity: 0, ...directionOffset }}
         animate={
           isInView
