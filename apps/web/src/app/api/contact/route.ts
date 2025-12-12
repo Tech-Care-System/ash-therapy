@@ -1,6 +1,5 @@
 
 import { NextResponse } from "next/server";
-import nodemailer from "nodemailer";
 import { z } from "zod";
 
 const formSchema = z.object({
@@ -17,48 +16,51 @@ export async function POST(req: Request) {
     // Validate
     const validatedData = formSchema.parse(body);
 
-    // Check for environment variables
-    const hasSmtp = process.env.SMTP_HOST && process.env.SMTP_USER && process.env.SMTP_PASS;
+    const resendApiKey = process.env.RESEND_API_KEY;
 
-    if (hasSmtp) {
-        const transporter = nodemailer.createTransport({
-            host: process.env.SMTP_HOST,
-            port: Number(process.env.SMTP_PORT) || 587,
-            secure: false, 
-            auth: {
-                user: process.env.SMTP_USER,
-                pass: process.env.SMTP_PASS,
-            },
-        });
+    if (resendApiKey) {
+        const { Resend } = await import("resend");
+        const resend = new Resend(resendApiKey);
 
-        await transporter.sendMail({
-            from: process.env.SMTP_FROM || '"Ash Therapy Website" <no-reply@ashtherapy.com>',
-            replyTo: validatedData.email,
-            to: process.env.CONTACT_EMAIL || "ashsach25@outlook.com",
-            subject: `New Contact Request: ${validatedData.name}`,
-            text: `
+        const { data, error } = await resend.emails.send({
+          from: "Ash Therapy <onboarding@resend.dev>", // Start with the testing domain
+          to: ["ashsach25@outlook.com"], // Your destination email
+          replyTo: validatedData.email,
+          subject: `New Contact Request: ${validatedData.name}`,
+          text: `
 Name: ${validatedData.name}
 Email: ${validatedData.email}
 Phone: ${validatedData.phone || "Not provided"}
 
 Message:
 ${validatedData.message}
-            `,
-            html: `
-              <h3>New Contact Request</h3>
-              <p><strong>Name:</strong> ${validatedData.name}</p>
-              <p><strong>Email:</strong> ${validatedData.email}</p>
-              <p><strong>Phone:</strong> ${validatedData.phone || "Not provided"}</p>
-              <br/>
-              <p><strong>Message:</strong></p>
-              <p>${validatedData.message.replace(/\n/g, '<br/>')}</p>
-            `,
+          `,
+          html: `
+            <div style="font-family: sans-serif; max-width: 600px; margin: 0 auto;">
+              <h2 style="color: #4a5c54;">New Contact Request</h2>
+              <div style="background-color: #f7f7f5; padding: 20px; border-radius: 8px;">
+                <p><strong>Name:</strong> ${validatedData.name}</p>
+                <p><strong>Email:</strong> ${validatedData.email}</p>
+                <p><strong>Phone:</strong> ${validatedData.phone || "Not provided"}</p>
+              </div>
+              <div style="margin-top: 20px;">
+                <p><strong>Message:</strong></p>
+                <p style="white-space: pre-wrap; color: #44403c;">${validatedData.message}</p>
+              </div>
+            </div>
+          `,
         });
-        console.log("Email sent successfully via SMTP.");
+
+        if (error) {
+          console.error("Resend Error:", error);
+          throw new Error("Failed to send email via Resend");
+        }
+        
+        console.log("Email sent successfully via Resend:", data?.id);
     } else {
-        // Log to console for dev/demo purposes if no SMTP
+        // Log to console for dev/demo purposes if no API Key
         console.log("----------------------------------------");
-        console.log("MOCK EMAIL SEND (No SMTP Configured)");
+        console.log("MOCK EMAIL SEND (No RESEND_API_KEY Configured)");
         console.log("To:", "ashsach25@outlook.com");
         console.log("From:", validatedData.email);
         console.log("Message:", validatedData);
