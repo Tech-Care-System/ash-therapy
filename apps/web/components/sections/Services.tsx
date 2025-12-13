@@ -3,18 +3,18 @@
 import { FadeIn } from "@ash-therapy/ui";
 import { Card, CardBody } from "@heroui/react";
 import {
-  Brain,
-  CloudRain,
-  Feather,
-  Heart,
-  Leaf,
-  LifeBuoy,
-  MessageCircle,
-  Mountain,
-  Shield,
-  Smile,
-  Sun,
-  Users,
+    Brain,
+    CloudRain,
+    Feather,
+    Heart,
+    Leaf,
+    LifeBuoy,
+    MessageCircle,
+    Mountain,
+    Shield,
+    Smile,
+    Sun,
+    Users,
 } from "lucide-react";
 import { SERVICES } from "../../data/services";
 
@@ -64,7 +64,7 @@ export function Services() {
           </div>
         </FadeIn>
 
-        <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+        <div className="grid grid-cols-2 gap-4 md:gap-6 md:grid-cols-2 lg:grid-cols-3">
           {SERVICES.map((service, index) => {
             const Icon = ICONS[index % ICONS.length];
             return (
