@@ -39,7 +39,7 @@ export function Logistics() {
                   <h3 className="text-2xl font-serif text-stone-800 mb-6 group-hover:text-sage-700 transition-colors">Fees</h3>
                   <div className="mb-6">
                      <span className="text-xl text-stone-700 font-medium bg-stone-100 px-4 py-2 rounded-full">
-                        {logistics.fees.price} / {logistics.fees.duration}
+                        {logistics.fees.badge}
                      </span>
                   </div>
                   <p className="text-stone-600 leading-relaxed mb-6 text-lg">
@@ -78,15 +78,10 @@ export function Logistics() {
             </div>
 
             {/* Additional Info Grid - Cancellation & Online */}
-            <div className="grid md:grid-cols-2 gap-12 pt-8 border-t border-sage-200/60">
-               <div className="space-y-4">
-                  <h4 className="font-serif text-xl text-stone-800">Online Therapy</h4>
-                  <p className="text-stone-600 leading-relaxed">{logistics.onlineTherapy.description}</p>
-               </div>
+            <div className="grid gap-12 pt-8 border-t border-sage-200/60">
                <div className="space-y-4">
                   <h4 className="font-serif text-xl text-stone-800">Cancellation Policy</h4>
                   <p className="text-stone-600 leading-relaxed">{logistics.cancellation.policy}</p>
-                  <p className="text-sm font-medium text-amber-700 bg-amber-50 px-3 py-1 rounded-lg w-fit border border-amber-100">{logistics.cancellation.notice} notice required</p>
                </div>
             </div>
 

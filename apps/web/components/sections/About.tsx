@@ -28,11 +28,6 @@ export const About = () => {
                         className="object-cover"
                       />
                    </div>
-                   
-                   {/* Floating quote/badge */}
-                   <div className="absolute -bottom-6 -right-6 lg:-right-12 bg-white p-8 rounded-[2rem] shadow-xl z-20 max-w-[220px]">
-                      <p className="font-serif italic text-stone-700 text-lg leading-snug">"Healing begins when we feel heard."</p>
-                   </div>
                 </div>
              </FadeIn>
           </div>
@@ -48,12 +43,9 @@ export const About = () => {
              </FadeIn>
 
              <FadeIn delay={0.4} direction="up">
-                <div className="prose prose-lg text-stone-600 space-y-6">
-                   <p>
-                      Life has its challenges, and there were times in my own journey when I longed for someone who could really hear me. That experience shapes the gentle, grounded way I hold space for others now.
-                   </p>
-                   <p>
-                      I am a registered member of the BACP and hold an MSc in Integrative Counselling. My approach is warm, gentle, and trauma-informed, blending person-centered care with practical tools to help you find your footing.
+                <div className="prose prose-lg text-stone-600">
+                   <p className="leading-[2] text-lg">
+                      Life can feel overwhelming at times, especially when it seems hard to put words to what you're experiencing. In my own life, being truly heard made a difference, and that experience informs the calm, attentive way I work with clients. At the heart of my work is a belief in the importance of safety, trust, and feeling understood.
                    </p>
                 </div>
              </FadeIn>
@@ -62,7 +54,16 @@ export const About = () => {
                 <div className="pt-6">
                    {/* Signature-like element */}
                    <p className="font-serif text-3xl text-stone-800 italic opacity-80 select-none">Ashmeet Sachdev</p>
-                   <p className="text-sm text-stone-500 mt-2 uppercase tracking-wide">MSc, MBACP</p>
+                   <p className="text-sm text-stone-500 mt-2 tracking-wide">MSc, MBACP</p>
+                   <div className="mt-4">
+                      <Image
+                        src="/images/credential.png"
+                        alt="BACP Registered Member"
+                        width={120}
+                        height={60}
+                        className="object-contain"
+                      />
+                   </div>
                 </div>
              </FadeIn>
           </div>

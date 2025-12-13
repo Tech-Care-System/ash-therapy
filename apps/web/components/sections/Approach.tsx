@@ -28,9 +28,6 @@ export function Approach() {
             <h2 className="font-serif text-stone-800 mb-6 text-4xl md:text-5xl leading-tight">
               {APPROACH_CONTENT.title}
             </h2>
-            <p className="text-xl text-stone-600 font-serif italic">
-               {APPROACH_CONTENT.subtitle}
-            </p>
           </FadeIn>
         </div>
 
@@ -56,6 +53,13 @@ export function Approach() {
             );
           })}
         </div>
+
+        {/* Footer text */}
+        <FadeIn delay={0.6}>
+          <p className="text-center text-stone-600 text-lg mt-16 max-w-3xl mx-auto">
+            {APPROACH_CONTENT.footer}
+          </p>
+        </FadeIn>
       </div>
     </section>
   );

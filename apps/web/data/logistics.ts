@@ -1,14 +1,15 @@
 export const logistics = {
   fees: {
     price: "£50",
+    badge: "£50 / per session",
     duration: "50 minutes",
     method: "Online via Microsoft Teams",
-    description: "I currently offer online therapy through Microsoft Teams. Each session lasts 50 minutes and is priced at £50.",
+    description: "I currently offer online therapy via Microsoft Teams. Each session lasts 50 minutes and is priced at £50.",
   },
   availability: {
-    frequency: "Weekly (usually)",
+    frequency: "Usually weekly",
     commitment: "No long term commitment",
-    description: "Sessions usually take place weekly, but we can discuss what feels right for you. There is no long term commitment and you are welcome to go at a pace that feels comfortable.",
+    description: "Sessions are usually weekly, though we can discuss what feels right for you. There is no long-term commitment, and you're welcome to go at a pace that feels comfortable.",
   },
   cancellation: {
     notice: "24 hours",

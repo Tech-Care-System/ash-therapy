@@ -16,7 +16,7 @@ export function FAQ() {
         <FadeIn>
            <div className="max-w-3xl mx-auto">
              <div className="text-center mb-16">
-               <span className="text-sage-600 font-bold uppercase tracking-widest text-sm block mb-4">Common Questions</span>
+               <span className="text-sage-600 font-bold uppercase tracking-widest text-sm block mb-4">Common Queries</span>
                <h2 className="text-4xl md:text-5xl font-serif text-stone-800">
                  Frequently Asked Questions
                </h2>

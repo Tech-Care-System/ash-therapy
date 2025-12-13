@@ -81,15 +81,12 @@ export function Contact() {
               <div className="space-y-8 lg:pr-8">
                 <div className="prose prose-stone prose-lg">
                   <p className="text-stone-600 leading-relaxed text-lg">
-                    You are welcome to use this space in whatever way feels most comfortable. Whether that is asking a question, exploring what you are looking for, or simply getting a feel for what working together might be like.
-                  </p>
-                  <p className="text-stone-600 leading-relaxed text-lg">
-                    There is no pressure or expectation. This is just a gentle first step toward support.
+                    You’re welcome to use this space in whatever way feels comfortable, whether that’s asking a question or sharing a little about what you’re looking for. There’s no pressure. This is just a gentle first step.
                   </p>
                 </div>
 
-                <div className="bg-white/60 p-8 rounded-3xl border border-white/50 shadow-sm">
-                  <h3 className="text-xl font-serif text-stone-800 mb-4">Direct Contact</h3>
+                <div className="bg-white/60 p-8 rounded-3xl border border-white/50 shadow-sm flex flex-col gap-8">
+                  <h3 className="text-xl font-serif text-stone-800">Contact Details</h3>
                   <a 
                     href="mailto:ashsach25@outlook.com" 
                     className="flex items-center gap-3 text-sage-700 hover:text-sage-900 transition-colors text-lg font-medium group"
@@ -99,7 +96,14 @@ export function Contact() {
                     </div>
                     ashsach25@outlook.com
                   </a>
+                  <div className="space-y-2">
+                    <h4 className="text-sm font-serif text-stone-800 mb-2">Free Consultation</h4>
+                    <p className="text-xs text-stone-600 leading-relaxed">
+                      If it feels helpful, I offer a free 15-minute consultation via Microsoft Teams (audio). This is a brief, informal space to ask questions and see whether working together feels like a good fit. There's no obligation to continue.
+                    </p>
+                  </div>
                 </div>
+
               </div>
 
               {/* Right Column: Form */}
@@ -203,6 +207,11 @@ export function Contact() {
                       >
                         {isSubmitting ? <Loader2 className="w-5 h-5 animate-spin" /> : "Send Message"}
                       </Button>
+
+                      {/* Response time note */}
+                      <p className="text-center text-stone-500 text-sm mt-2">
+                        I aim to respond to queries within 2 working days.
+                      </p>
                     </form>
                   )}
                 </CardBody>

@@ -4,15 +4,15 @@ export interface ServiceItem {
 
 export const SERVICES: ServiceItem[] = [
   { title: "Anxiety" },
-  { title: "Depression and low mood" },
-  { title: "Low self esteem and confidence" },
+  { title: "Low mood and depression" },
+  { title: "Low self-esteem and confidence" },
   { title: "Shame and guilt" },
   { title: "Stress and burnout" },
-  { title: "Trauma (past or recent)" },
+  { title: "Trauma" },
   { title: "Grief and loss" },
   { title: "Relationship difficulties" },
   { title: "Identity exploration" },
   { title: "Addiction and recovery" },
   { title: "Life transitions and personal growth" },
-  { title: "Feeling stuck or needing someone to talk to" },
+  { title: "Feeling stuck or needing space to talk" },
 ];
