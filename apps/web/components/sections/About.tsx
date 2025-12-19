@@ -22,7 +22,7 @@ export const About = () => {
                    <div className="absolute inset-0 bg-sage-200/50 rounded-[3rem] rotate-3 scale-105 z-0" />
                    <div className="relative h-full w-full rounded-[2.5rem] overflow-hidden shadow-xl z-10">
                       <Image
-                        src="/images/about/about-ash-v2.png"
+                        src="/images/about/about-ash-v3.png"
                         alt="Portrait of Ash, Therapist"
                         fill
                         className="object-cover"
