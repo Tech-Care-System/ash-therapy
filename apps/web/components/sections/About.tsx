@@ -17,12 +17,12 @@ export const About = () => {
           {/* Image Side - Order 1 on mobile to establish connection */}
           <div className="relative order-1 lg:order-1">
              <FadeIn delay={0.2} direction="right">
-                <div className="relative w-full aspect-[4/5] max-w-md mx-auto lg:mx-0">
+                <div className="relative w-full aspect-4/5 max-w-md mx-auto lg:mx-0">
                    {/* Organic Frame - visual trick using border radius */}
                    <div className="absolute inset-0 bg-sage-200/50 rounded-[3rem] rotate-3 scale-105 z-0" />
                    <div className="relative h-full w-full rounded-[2.5rem] overflow-hidden shadow-xl z-10">
                       <Image
-                        src="/images/about/about-ash-v3.png"
+                        src="/images/about/about-ash.jpeg"
                         alt="Portrait of Ash, Therapist"
                         fill
                         className="object-cover"
@@ -44,7 +44,7 @@ export const About = () => {
 
              <FadeIn delay={0.4} direction="up">
                 <div className="prose prose-lg text-stone-600">
-                   <p className="leading-[2] text-lg">
+                   <p className="leading-loose text-lg">
                       Life can feel overwhelming at times, especially when it seems hard to put words to what you're experiencing. In my own life, being truly heard made a difference, and that experience informs the calm, attentive way I work with clients. At the heart of my work is a belief in the importance of safety, trust, and feeling understood.
                    </p>
                 </div>
